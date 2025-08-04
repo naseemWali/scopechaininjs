@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scope chain in js</title>
+</head>
+<body>
+    <script>
+        // scope chaining in js
+        // fxn c is lexically inside its parent which is b and b is lexically inside its parent a and a is inside its parent i.e global scope .
+        // it is acessing its value from its parent .
+
+
+
+
+
+
+// we cant acess value from child to parent in scope chaining but it is possible in some ways
+//  how to acess value from child to parent 
+        function a() {
+            
+            function b() {
+               
+                function c() {
+                  var x=10; 
+                  return x
+                  
+                                     
+                }
+               return c()
+                
+            }
+            return b()
+            
+        }
+      var result=  a()
+console.log(result);
+
+
+
+    </script>
+</body>
+</html>
