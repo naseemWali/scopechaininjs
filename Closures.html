@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closures</title>
+</head>
+<body>
+    <script>
+//  closure:fxn along with its lexical scope bundled together forms a closure
+//  in this below example it does not only return fxn but a closure means fxn along its lexical scope is returning .As we know js run synchronusly
+//  when we call that fxn even after thousand lines of code it will still remember its lexical scope or its variable value fom which/where parent scope  is coming
+
+    //   function x() {
+    //     var a=22;
+    //      function y() {
+    //         console.log(a); 
+    //     }
+    //     a=24;
+    //     return y
+    //   }  
+    //   const result= x() 
+    //   result()
+      
+    //    second cool method of returning a fxn from another fxn or closure
+    //  function a() {
+    //     var c=22;
+
+    //    return  function b() {
+    //         console.log(c); 
+    //     }
+        
+    //   }  
+    //   const res= a() 
+    //   res()
+    
+      
+    //   third example
+    function d() {
+
+        var g=33;
+
+        function e() {
+        var x=99;
+
+            function f() {
+                console.log(g,x);
+                
+            }
+            f()
+        }
+        e()
+
+    }
+    d()
+    // closures will be formed behind the scene like closure of e and closure of d while f fxn will be in global
+    // why f fxn should be in global not like e or d making closure ?
+
+    // uses of closures in js
+    // module design pattern
+    // currying
+    // function like once
+    // memoize
+    // maintaining state in async world
+    // setTimeouts
+    // iterators
+    // and many more
+
+    </script>
+</body>
+</html>

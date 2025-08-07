@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>callbacks fxns in js</title>
+</head>
+<body>
+    <button id="clickme">click me dear</button>
+<p>count</p>
+    <script>
+        // callback fxns are very powerfull because 
+        // callback fxns gives the asynchrinity of world in js
+        //  like in setimeout fxns callback fxn takes its seperate memory and reserved with a time set while other fxns/code execute
+        // example 
+        // setTimeout(() => {
+        //     console.log('hello pumpkin');
+            
+        // },5000);
+
+        // function x(y) {
+        //     console.log('x');
+        //     y()
+        // }
+    
+        // x( () => {
+        //     console.log('y');
+            
+        // })
+        // var count=0;
+          
+        function addeventlistener() {
+        let count=0;
+        document.getElementById('clickme').addEventListener('click', () => {
+        console.log('x',count++);  
+        })
+        }
+        addeventlistener()
+        // eventlisteners form closure  and their callback fxns remember where their variable value is coming from.
+        // why it is important to learn to remove eventlisteners just because it takes too much memery and make page very slow
+        
+    </script>
+</body>
+</html>

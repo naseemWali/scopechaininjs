@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block Scope And Shadowing</title>
+</head>
+<body>
+    <script>
+
+// block in js mean combining multiple statements together in a block in a place where js expects one statement.
+// {} => block
+// we can write it like this if we want to write a single statement
+// if (true) console.log('hello');
+// if (true) true;
+
+
+
+// but when we need multiple statements to group them together we use block with if like.
+
+// if (true) {
+//     var a=12;
+//     console.log(a);
+    
+// }
+// {} it wraps up group of statements together in a place where js expects a single statement.
+
+    //  {
+    //     var a=10;
+    //     let b=11;
+    //     const c=12;
+    //     console.log(a);
+    //     console.log(b);
+    //     console.log(c);
+        
+    //  }   
+    //   console.log(a);
+    //   console.log(b);
+    //   console.log(c);
+
+    //   here we ca acess a but not b and c because they dont appear in global scope  and they have seperate memory space   that's why it  is called let and const a block scope let and const are only available inside its scope.
+
+    // shadowing 
+    // illegal shadowing verses legal shadowing 
+
+    // illegal shadowing  it will probably  throw an error 
+    // let d=99;
+    // {
+    //     var d=22;
+    //     console.log(d);
+        
+    // }
+
+    // legal shadowing
+    // by scoping through fxn global scope variable dont interfer with block scope variable and it sets it boundary inside scope
+    
+//    let s=22;
+//    function x() {
+//     var s=33;
+//     console.log(s);
+//    }
+//    console.log(s);
+   
+
+
+    // Examples
+//     var a=33;
+//    {
+//     const  a=23;
+//     console.log(a);
+    
+//    }
+//    console.log(a);
+   
+    </script>
+</body>
+</html>
