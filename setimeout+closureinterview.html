@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetTimeout + Closures</title>
+</head>
+<body>
+    <script>
+        // interview related question
+        // when we use var instead of let or const it will print 6 five time not printing 1 2 3 and so on with eact time just because var is fxn scope and it does not create new binding or new variable  while calling callback fxn in each iteration and it  reference to same variable eact time
+        // while let is perfect. 
+
+        // function x() {
+        //    for (let index = 1; index <=5; index++) {
+        //      setTimeout(function ()  {
+        //     console.log(index);
+            
+        // }, index *1000);
+        // }  
+        // console.log('namasta js');
+        
+        // }
+        // x()
+       
+        // some smart interviewers ask not to use let then we can do by this method
+        // simply putting settimeout fxn in another fxn by creating it
+
+        function y() {
+            for (let index = 1; index <=5; index++) {
+            function close(x) {
+             setTimeout(() => {
+                console.log(x);
+                
+             }, x *1000 );
+            }    
+            close(index)            
+            }
+        }
+        y()
+
+    </script>
+</body>
+</html>
